@@ -23,34 +23,28 @@ export default function Home() {
         <div className={styles.ctas}>
           <a
             className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/mars"
           >
             <Image
               className={styles.logo}
-              src="/vercel.svg"
+              src="/nasa.webp"
               alt="Vercel logomark"
-              width={20}
-              height={20}
+              width={40}
+              height={40}
             />
-            Deploy now
+            See Mars
           </a>
           <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/cats"
             className={styles.secondary}
           >
-            Read our docs
+            Don't see mars
           </a>
         </div>
       </main>
       <footer className={styles.footer}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image
             aria-hidden
@@ -63,8 +57,6 @@ export default function Home() {
         </a>
         <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image
             aria-hidden
@@ -77,8 +69,6 @@ export default function Home() {
         </a>
         <a
           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image
             aria-hidden
