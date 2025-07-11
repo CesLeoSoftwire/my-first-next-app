@@ -1,4 +1,6 @@
 import Image from "next/image";
+import React from "react";
+import styles from "./cats.module.css";
 
 const catImageStyle: React.CSSProperties = {
     borderRadius: '10%',
@@ -16,6 +18,11 @@ const catCage: React.CSSProperties = {
     flexWrap: 'wrap',
     justifyContent: 'center',
 }
+
+const loadingStyle: React.CSSProperties = {
+    display: 'flex', alignItems: 'center', flexDirection: 'column'
+}
+
 
 export default async function Page() {
     // const link = process.env.CAT_LINK;
@@ -37,19 +44,42 @@ export default async function Page() {
     );
 
     return (
-        <div className="cat-container" style={catCage}>
-            {filteredPosts.map((post: any) => (
-                <a key={post.id} href={post.url} target="_blank" rel="noopener noreferrer">
-                    {/*{post.breeds.name}*/}
-                    <Image
-                        src={post.url}
-                        alt= ""
-                        style={catImageStyle}
-                        height={400}
-                        width={400}
-                        // layout="responsive"
-                    /></a>
-            ))}
+        <div>
+            <div>
+                <div className={styles.titleStyle}>
+                    <p>CATS</p>
+                </div>
+                <div style={loadingStyle}>
+                    {/*<h1>Loading...</h1>*/}
+                    <div className={styles.subTitleStyle}>
+                        Awesomeness loaded!
+                    </div>
+                    <div>
+                        <Image
+                            src="/spinning_cat.webp"
+                            alt="Loading..."
+                            width={400}
+                            height={400}
+                        />
+                    </div>
+
+                </div>
+            </div>
+            <div className="cat-container" style={catCage}>
+                {filteredPosts.map((post: any) => (
+                    <a key={post.id} href={post.url} target="_blank" rel="noopener noreferrer">
+                        {/*{post.breeds.name}*/}
+                        <Image
+                            src={post.url}
+                            alt= ""
+                            style={catImageStyle}
+                            height={400}
+                            width={400}
+                            // layout="responsive"
+                        /></a>
+                ))}
+            </div>
         </div>
+
     )
 }

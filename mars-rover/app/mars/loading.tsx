@@ -1,7 +1,7 @@
 // app/page/loading.js
 import Image from "next/image";
 import React from "react";
-import styles from "./cats.module.css";
+import styles from "./mars.module.css";
 
 const loadingStyle: React.CSSProperties = {
     display: 'flex', alignItems: 'center', flexDirection: 'column', padding: '250px'

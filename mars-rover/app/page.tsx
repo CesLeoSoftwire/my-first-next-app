@@ -27,7 +27,7 @@ export default function Home() {
           >
             <Image
               className={styles.logo}
-              src="/nasa.webp"
+              src="/nasa-logo.svg"
               alt="Vercel logomark"
               width={40}
               height={40}
@@ -38,7 +38,7 @@ export default function Home() {
             href="/cats"
             className={styles.secondary}
           >
-            Don't see mars
+            CATS
           </a>
         </div>
       </main>
